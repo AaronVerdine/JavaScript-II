@@ -8,12 +8,12 @@ function basicMath (a, b) {
     return totalSum + (a + b);
   }
 
-  return addTogether();
+  return addTogether;
 
 
 }
-
-basicMath(10, 5);
+let aaronClosure = basicMath(10, 5);
+console.log(aaronClosure());
 
 
 
@@ -24,16 +24,17 @@ basicMath(10, 5);
 
 // Return a function that when invoked increments and returns a counter variable.
 
-const counter = () => {
+const dealer = () => {
 let count = 0;
   return function () {
 
-
-    return count++;
+// count++ = returns then increments starting at "0"
+// ++count = returns then increments starting at "1"
+    return ++count;
   }
 };
 
-const newCardCount = counter();
+const newCardCount = dealer();
 console.log(newCardCount());
 console.log(newCardCount());
 console.log(newCardCount());
